@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "c6bcc5e74f5dfc1f",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e873686f7721ae6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aef1ebbe7481081e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spark Connect.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spark Connect"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9eb5a2a42021be7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b15a42011c5f764",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "626f6589f6d4e2c9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0ea0b20bfe516730",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f1591a4d11d72518",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a40b7b97ddf06ef6",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a857989e16f5ca5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ceb71ec50e6b4606",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spark Architecture and Components.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Spark Architecture and Components"
+            }
+          },
+          {
+            "id": "d3a061e49f5b569a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spark Architecture and Components.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Spark Architecture and Components"
+            }
+          },
+          {
+            "id": "96673153e63be045",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e91c0a9748fabd4a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "725d814a5d08603c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spark Architecture and Components.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Spark Architecture and Components"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "aef1ebbe7481081e",
+  "lastOpenFiles": [
+    "().md",
+    "Spark Connect.md",
+    "Garbage Collection Cycle and Bucketing.md",
+    "Pasted image 20260407180142.png",
+    "Partition Pruning and Dynamic PP.md",
+    "Salting, Broadcast Variables and Accumulators.md",
+    "Pasted image 20260407131447.png",
+    "Pasted image 20260407122413.png",
+    "Pasted image 20260407121801.png",
+    "Pasted image 20260406133049.png",
+    "Pasted image 20260406130129.png",
+    "Apache Spark 4.0.md",
+    "Cache and Persist in Spark.md",
+    "Pasted image 20260406100050.png",
+    "Pasted image 20260406094927.png",
+    "Pasted image 20260406094224.png",
+    "Memory Managment and Deployment modes.md",
+    "Delta Optimization.md",
+    "Pasted image 20260406081653.png",
+    "PandasAPI.md",
+    "Speed+Arrow vs Series+Typehinting.md",
+    "Pandas UDF.md",
+    "Work.md",
+    "Spark Structured Streaming.md",
+    "Window Operations + Watermarks + Late Arrivals.md",
+    "Jobs, Stages and Task.md",
+    "Spark Architecture and Components.md",
+    "AQE - Adaptive Query Execution.md",
+    "SparkSQL Properties.md",
+    "Shuffle and Join.md",
+    "Handle Malformed Data.md",
+    "File Source Options.md",
+    "Data Writing, Batch Output Modes.md",
+    "Concat Transformations.md",
+    "ADV Transformations.md",
+    "Spark Transformations + reads.md"
+  ]
+}
