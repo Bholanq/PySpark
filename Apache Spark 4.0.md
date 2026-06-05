@@ -8,7 +8,7 @@ Main Syllabus:
 7. [[PandasAPI]]
 8. [[Delta Optimization]]
 9. [[Hadoop - HDFS&MapReduce]] 
-10. [[Delta Lake, Delta Format]]
+10. [[Delta Lake,Delta Format]]
 11. [[Memory Managment and Deployment modes]] 
 12. [[Cache and Persist in Spark]]
 13. [[Partition Pruning and Dynamic PP]]

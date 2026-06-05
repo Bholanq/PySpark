@@ -1,6 +1,7 @@
 [[Lazy Evaluation]]
 [[Catalyst Optimizer in Spark]]
 [[Spark Ecosystem and RDDs]]
-[[Jobs, Stages and Task]]
+[[Jobs, Stages-slots and Task]]
 [[Spark Query Plans]]
 [[Spark Transformations + reads]]
+
