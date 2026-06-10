@@ -38,3 +38,15 @@ Datasets - Logical Grouping of data that generally are closely related and/or sh
 > **Strong consistency guarantees that every read sees the most recent successful write. Eventual consistency guarantees that all replicas will converge to the same value eventually, but some reads may temporarily see older data.**
 
 ![[Pasted image 20260606060519.png]]
+
+# Databricks Repos vs Native Notebook Versioning 
+| Feature                               | Native Notebook Versioning | Databricks Repos  |
+| ------------------------------------- | -------------------------- | ----------------- |
+| Version history                       | Yes                        | Yes (via Git)     |
+| Branching                             | No                         | Yes               |
+| Pull Requests                         | No                         | Yes               |
+| Code Reviews                          | No                         | Yes               |
+| Merge changes                         | No                         | Yes               |
+| Restore old versions                  | Yes                        | Yes               |
+| Collaborate with developers           | Limited                    | Full Git workflow |
+| Connect to GitHub/Azure DevOps/GitLab | No                         | Yes               |

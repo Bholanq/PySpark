@@ -21,13 +21,13 @@ In Genie by default we have SharePoint and Google Drive.
 
 
 # Genie Settings
-- User
-- Workspace
-- Skills 
+- User Inst
+- Workspace Inst
+- User Skills 
 - Workspace Skills
 - Serverless Usage Policy 
 Priority:
-Workspace Inst > User Inst 
+**Workspace Inst > User Inst** 
 
 Assistant instructions files should only contain up to 20,000 characters
 ![[Pasted image 20260605123608.png|266]]
@@ -45,7 +45,7 @@ what can the agent do
 
 ## What are Agent Skills?
 
-Agent Skills are a lightweight, open format for extending AI agent capabilities with specialized knowledge and workflows.At its core, a skill is a folder containing a `SKILL.md` file. This file includes metadata (`name` and `description`, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, reference materials, templates, and other resources.
+Agent Skills are a lightweight, open format for extending AI agent capabilities with specialized knowledge and workflows. At its core, a skill is a folder containing a `SKILL.md` file. This file includes metadata (`name` and `description`, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, reference materials, templates, and other resources.
 
 ```
 my-skill/
@@ -76,4 +76,65 @@ Agents load skills through **progressive disclosure**, in three stages:
 
 Full instructions load only when a task calls for them, so agents can keep many skills on hand with only a small context footprint.
 
+# Guardrails and Limitations
+
+![[Pasted image 20260609154129.png]]
+
+- 20 queries across all genie workspaces
+- 20,000 char text instructions limit.
+# Genie Space
+
+## Instructions
+1. **Text** - Simple as it sounds just enter the instruction in the text box.
+	1. Use this sparringl
+
+2. Joins - 
+	**Join instructions** are **metadata annotations** in Genie spaces that help me understand how tables relate to each other. They typically specify:
+	
+	- **Foreign key relationships** - which columns link tables together (e.g., `customer.c_custkey` joins to `orders.o_custkey`)-
+	- **Join types** - whether to use INNER JOIN, LEFT JOIN, etc.
+	- **Cardinality** - one-to-many, many-to-one relationships between tables
+
+In **Databricks Genie Spaces**, **join instructions** teach Genie **how different tables are related**, so that when a user asks a question involving multiple datasets, Genie generates the correct SQL `JOIN` statements.
+
+Without join instructions, Genie has to guess how tables should be connected, which often leads to incorrect results, duplicated rows, or failed queries.
+
+```
+IF THE JOIN INSTRUCITONS IT SELF IS WRONG, eg. if the join uses one-to-one but the data is clearly one-to-many then genie will use one-to-many join query resolution.
+```
+
+3. SQL Expressions
+	1. In **Databricks Genie**, a **SQL Expression** is a reusable SQL definition that teaches Genie **how to calculate a business metric or derive a field**. Instead of relying on Genie to infer the logic from natural language, you explicitly provide the SQL that should be used.
+
+##### Fields in SQL Expression Instructions
+
+**Fields** define which **columns or calculated expressions** should be included when the SQL expression is used. They specify what data to SELECT.
+##### Filter in SQL Expression Instructions
+**Filter** defines the **WHERE clause conditions** that should be applied when using this SQL expression. It restricts which rows are included in the calculation.
+
+| Feature               | Purpose                                            |
+| --------------------- | -------------------------------------------------- |
+| **Join Instructions** | Tell Genie _how tables are related_                |
+| **SQL Expressions**   | Tell Genie _how to calculate something_            |
+| **Text Instructions** | Tell Genie _how to interpret business terminology_ |
+
+Synonyms field: Enter common ways that users might refer to the expressions colloquially
+
+4. **SQL Quries**
+	1. Why use SQL Query Instructions if Genie already generates SQL?
+	2. Because Genie may not know your **business-specific logic**.
+For example:
+Users ask:
+> "Show active customers."
+
+But "active customer" actually means:
+```
+Purchased at least twice in the last 180 days,excluding trial accounts.
+```
+Genie cannot infer this.
+You provide an example query:
+```
+SELECT customer_idFROM salesWHERE account_type <> 'Trial'GROUP BY customer_idHAVING COUNT(*) >= 2   AND MAX(order_date) >= CURRENT_DATE() - 180;
+```
+Now Genie understands what **active customer** means.
 

@@ -1,24 +1,27 @@
-# Medallion Architecture
 
-![[Pasted image 20260607063136.png]]
+# Installing Pyspark(PyPI)
 
-# Workspace
-A **Databricks Workspace** is the **collaborative environment where users interact with Databricks**
-Don't cost money
+`pip install pyspark`
 
-- UI where users interact with the Databricks Web Application
-- Contains:
-	- Cluster
-	- Notebooks
-	- Jobs
-	- Repos
+If we want to install specific components of Pyspark we can:
 
 ```
-Company Databricks Account
-│
-├── Dev Workspace
-├── QA Workspace
-├── UAT Workspace
-└── Production Workspace
+#spark sql
+pip install pyspark[sql]
+
+#pandas on spark
+pip install pysprak[pandas_on_spark] ploty
+
+#spark connect
+pip install pyspark[connect]
 ```
-![[Pasted image 20260607192331.png|496]]
+
+Or specific hadoop instances
+
+```
+PYSPARK_HADOOP_VERSION = 3 pip install pyspark
+```
+
+#### We can directly interface with PySpark and DeltaLake using CLI
+![[Pasted image 20260609063605.png]]
+
