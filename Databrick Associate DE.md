@@ -2,9 +2,9 @@
 
 1. [[Databricks Intelligence Platform]]
 2. [[Development and Ingestion]]
-3. Data Processing & Transformations
+3. [[Data Processing & Transformations]]
 4. Productionizing Data Pipelines
-5. Data Governance and Quality 
+5. [[Data Governance and Quality]] 
 
 ![[Pasted image 20260606045039.png|572]]
 

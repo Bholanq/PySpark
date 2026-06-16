@@ -48,6 +48,7 @@ In the Databricks architecture, the Data Plane is where the data resides and whe
 
 # Databricks Runtime
 **Databricks Runtime (DBR)** is the **software environment that runs on Databricks compute resources** such as clusters.
+
 ![[Pasted image 20260607182553.png]]
 
 # Cluster Visibility 
@@ -110,11 +111,29 @@ Company Databricks Account
 [[Version Control]]
 
 # Delta Lake 
-
+- Transaction layer built on top of Cloud Storage
+Regular Parquet:
+```
+orders/
+├── file1.parquet
+├── file2.parquet
+```
+Delta:
+```
+orders/
+├── _delta_log/│   
+	├── 000000.json│   
+	├── 000001.json│   
+└── ...
+	├── file1.parquet
+	├── file2.parquet
+```
 Delta Lakes bring:
 ACID transactions, 
 schema control(enforcement, evolution),
-and [[performance improvements]](Z-ORDER, OPTIMIZE, LIQUID CLUSTERING, and VACCUME)
+and [[Optimizations]](Z-ORDER, OPTIMIZE, LIQUID CLUSTERING, and VACCUME)
 to data lakes.
 
-![[Pasted image 20260609060142.png]]
+using `_delta_log`
+
+![[Pasted image 20260609060142.png|527]]

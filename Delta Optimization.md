@@ -4,7 +4,7 @@
 - In **PySpark / Spark SQL**, the `OPTIMIZE` command is used mainly with **Delta tables** (Databricks / Delta Lake). It helps **compact small files into larger ones**, improving query performance.
 - ![[Pasted image 20260406081151.png|510]]
 
-# 2. ZOrderBy(ZORDERING, DATA SKIPPING, PRUNING)
+## 2. ZORDER(ZORDERING, DATA SKIPPING, PRUNING)
 
 ![[Pasted image 20260406081653.png|434]]
 

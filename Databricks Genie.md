@@ -82,8 +82,10 @@ Full instructions load only when a task calls for them, so agents can keep many 
 
 - 20 queries across all genie workspaces
 - 20,000 char text instructions limit.
+- If the queries in SQL expression/ Query are illogical or create outputs that are too big to handle then it will run its own query.
 # Genie Space
 
+These instructions are listed in priority order
 ## Instructions
 1. **Text** - Simple as it sounds just enter the instruction in the text box.
 	1. Use this sparringl
@@ -106,6 +108,7 @@ IF THE JOIN INSTRUCITONS IT SELF IS WRONG, eg. if the join uses one-to-one but t
 3. SQL Expressions
 	1. In **Databricks Genie**, a **SQL Expression** is a reusable SQL definition that teaches Genie **how to calculate a business metric or derive a field**. Instead of relying on Genie to infer the logic from natural language, you explicitly provide the SQL that should be used.
 
+### basically when referring to these terms use these expressions 
 ##### Fields in SQL Expression Instructions
 
 **Fields** define which **columns or calculated expressions** should be included when the SQL expression is used. They specify what data to SELECT.
@@ -138,3 +141,6 @@ SELECT customer_idFROM salesWHERE account_type <> 'Trial'GROUP BY customer_idHAV
 ```
 Now Genie understands what **active customer** means.
 
+# Some good practices
+
+![[Pasted image 20260611131203.png|519]]
