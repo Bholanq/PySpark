@@ -1,4 +1,8 @@
+[[Hadoop - HDFS&MapReduce]]
+# Apache Spark
+Apache Spark is an **open-source distributed computing engine** designed to process **large amounts of data quickly across multiple machines**.
 
+![[Pasted image 20260616155455.png]]
 # Installing Pyspark(PyPI)
 
 `pip install pyspark`
@@ -25,3 +29,4 @@ PYSPARK_HADOOP_VERSION = 3 pip install pyspark
 #### We can directly interface with PySpark and DeltaLake using CLI
 ![[Pasted image 20260609063605.png]]
 
+[[RDDs]]

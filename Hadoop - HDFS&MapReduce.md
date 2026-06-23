@@ -22,14 +22,66 @@ HDFS follows a master-slave architecture
 
 ![[Pasted image 20260303173013.png|306]]
 Map -> Reduce 
-![[Pasted image 20260303173633.png|531]]
+![[Pasted image 20260303173633.png|305]]
 
 **Mapper** and **Reducers** are just task not actual entities. 
 Computation comes to the data, the data does not move.
 
 In this this case data is stored in each computer locally - due to the benefits of HDFS. 
-Mappers make their key-value pairs and also store them locally (intermediate transformation). The key value pairs are picked by the Reducers. 
+Mappers make their key-value pairs and also store them locally (intermediate transformation). (First Disk Write). 
 
-![[Pasted image 20260303174739.png|531]]
+Then Hadoop decides which Reducer should process which pair based on the Key of the key:value pair. The data is shuffled and sorted across the network.
 
-MapReduce, HDFS and Spark work together to provide seamless data storage/transformations.
+> **"If MapReduce eventually shuffles data across the network anyway, why bother with local mapping at all?"**
+
+The answer is:
+
+> **Because the amount of data moved after local mapping is usually much smaller than the original data.**
+
+The reducer then aggregates the data available in the local machine.
+
+![[Pasted image 20260616170910.png|363]]
+
+![[Pasted image 20260303174739.png|339]]
+
+|Feature|Hadoop MapReduce|Spark|
+|---|---|---|
+|Processing|Disk-based|In-memory|
+|Speed|Slower|Faster|
+|API|Complex Java|SQL, Python, Scala|
+|Streaming|Limited|Yes|
+|Machine Learning|Limited|MLlib|
+|Storage|HDFS|Uses HDFS/S3/ADLS|
+
+# Hadoop vs Spark: Important Clarification
+
+People often think:
+
+> "Spark replaced Hadoop."
+
+Not exactly.
+Spark mainly replaced **MapReduce**, not necessarily all of Hadoop.
+### Old Architecture
+```
+HDFS 
+↓
+MapReduce 
+↓
+Hive
+```
+### Newer Architecture
+```
+HDFS / S3 / ADLS        ↓      Spark        ↓ Delta Lake
+```
+
+| Feature              | MapReduce          | Spark                |
+| -------------------- | ------------------ | -------------------- |
+| Processing Model     | Fixed Map → Reduce | DAG                  |
+| Intermediate Storage | Disk               | Mostly Memory        |
+| Query Optimization   | None               | Catalyst             |
+| Execution            | Immediate          | Lazy                 |
+| APIs                 | Java-centric       | SQL, Python, Scala   |
+| Multi-step Pipelines | Multiple Jobs      | Single DAG           |
+| Streaming            | Limited            | Structured Streaming |
+| Machine Learning     | External Tools     | MLlib                |
+| Speed                | Slower             | Faster               |

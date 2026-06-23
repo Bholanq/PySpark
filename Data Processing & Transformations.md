@@ -103,3 +103,5 @@ Now another team can consume the files.
 |SQL Engine|Delta Lake|Redshift|
 
 [[Delta Lake SQL Statements]]
+[[Pyspark]]
+[[Delta Table Operations]]
