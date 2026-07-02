@@ -11,12 +11,16 @@ Databricks is a Software Company that specializes in providing fully managed Apa
 | **DBU** | Databricks Unit         | Compute consumption         | Clusters, Jobs, SQL Warehouses      |
 | **DSU** | Databricks Storage Unit | Storage-related consumption | Certain serverless storage services |
 # Budget
+
 Budgets is an cost management feature, that allows you to set an amount threshold and receive an email when the budget has been exceeded.
 
 # Clusters/Compute
+
 All-Purpose Clusters are interactive compute resources used for development and exploration. 
+An All-Purpose cluster is started by the user and after certain time of inactivity the cluster is auto terminated. Within this time frame the cluster is running even if no one is using it.
 
 Jobs Clusters are ephemeral clusters created specifically for scheduled or production workloads.
+Job Clusters are created for that particular job.
 
 SQL Warehouses are SQL-optimized compute resources designed for analytics, dashboards, BI integrations, and natural-language querying through Genie.
 
@@ -71,7 +75,7 @@ similar to IAM in AWS
 
 # Workspace
 A **Databricks Workspace** is the **collaborative environment where users interact with Databricks**
-Don't cost money
+- Don't cost money
 
 - UI where users interact with the Databricks Web Application
 - Contains:
@@ -108,6 +112,25 @@ Company Databricks Account
 
 #### %fs is shortcut to the dbutil.fs command 
 
+#### 8. `%run`
+Runs another notebook and imports its definitions into the current notebook.
+Suppose you have:
+
+### `Utilities`
+```
+def greet(name):
+    print(f"Hello {name}")
+```
+In another notebook:
+```
+%run ./Utilities
+greet("Alice")
+```
+Output
+```
+Hello Alice
+```
+This is commonly used to reuse helper functions across notebooks.
 [[Version Control]]
 
 # Delta Lake 

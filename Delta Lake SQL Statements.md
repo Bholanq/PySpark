@@ -69,7 +69,8 @@ It removes that reference.
 
 Delta Log becomes effectively:
 ```
-FileA.parquetFileC.parquet
+FileA.parquet
+FileC.parquet
 ```
 Queries work again.
 ```
@@ -117,7 +118,14 @@ Because Parquet files are immutable.
 Instead, Delta does something conceptually like this:
 
 ```
-Old File A:1 Alice2 Bob3 Charlie↓New File B:1 Alice3 Charlie
+Old File A:
+1 Alice
+2 Bob
+3 Charlie
+	↓
+New File B:
+1 Alice
+3 Charlie
 ```
 
 Then the Delta log changes from:
@@ -129,10 +137,10 @@ Version 1:Use File A
 to:
 
 ```
-Version 2:Use File BIgnore File A
+Version 2:
+Use File B
+Ignore File A
 ```
-
----
 
 # 3. What if Deletion Vectors are enabled?
 
@@ -141,16 +149,20 @@ Modern Delta Lake supports **Deletion Vectors (DVs)**.
 Instead of rewriting File A immediately, Delta can do this:
 
 ```
-File A:1 Alice2 Bob3 CharlieDeletion Vector:Mark row #2 as deleted
+File A:
+1 Alice
+2 Bob
+3 Charlie
+Deletion Vector: Mark row #2 as deleted
 ```
 
 The Delta log says:
 
 ```
-Version 2:Use File ABut skip Bob using the DV
+Version 2:
+Use File A
+But skip Bob using the DV
 ```
-
----
 
 ## Why is this useful?
 
@@ -159,25 +171,31 @@ Because rewriting large files is expensive.
 With DVs:
 
 ```
-DELETEUPDATEMERGE
+DELETE
+UPDATE
+MERGE
 ```
 
 become much faster.
-
----
 
 # 4. The problem with DVs
 
 Eventually, your table might look like this:
 
 ```
-File A100 million rowsDeletion Vector:5 million deleted rows
+File A
+100 million rows
+Deletion Vector:5 million deleted rows
 ```
 
 Queries now have to do:
 
 ```
-Read File A↓Read DV metadata↓Filter deleted rows
+Read File A
+↓
+Read DV metadata
+↓
+Filter deleted rows
 ```
 
 The data is **logically deleted**, but not **physically removed**.
@@ -236,9 +254,6 @@ Version 3:Use File B
 ```
 
 File A becomes obsolete.
-
----
-
 # 6. Does REORG delete File A?
 
 **No.**
@@ -248,7 +263,8 @@ This is a crucial point.
 After REORG:
 
 ```
-File A  ← obsoleteFile B  ← active
+File A  ← obsoleteFile 
+B  ← active
 ```
 
 File A still physically exists.
@@ -272,3 +288,5 @@ VACUUM customers;
 ```
 
 after the retention period.
+
+[[Pivot & Unpivot Clause in SQL]]

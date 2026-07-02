@@ -63,13 +63,16 @@ INSERT *;
 You receive daily sales files.
 
 ```
-ADLS└── landing/    ├── sales_20260615.csv    └── sales_20260616.csv
+ADLS└── landing/    
+			├── sales_20260615.csv    
+			└── sales_20260616.csv
 ```
 
 Pipeline:
 
 ```
-COPY INTO bronze_salesFROM 'abfss://landing@storage/sales/'FILEFORMAT = CSV;
+COPY INTO bronze_sales
+FROM 'abfss://landing@storage/sales/'FILEFORMAT = CSV;
 ```
 
 Only new files get loaded.
@@ -92,16 +95,17 @@ TO 'abfss://exports@storage/june_sales/'FORMAT CSV;
 ```
 Now another team can consume the files.
 
-|Operation|Databricks Delta Lake|AWS Redshift|
-|---|---|---|
-|Import data|`COPY INTO`|`COPY`|
-|Export data|`UNLOAD`|`UNLOAD`|
-|Tracks already-loaded files|✅ Yes|❌ No|
-|Upserts/deduplication|❌ Use `MERGE`|❌ Use `MERGE`/staging tables|
-|Source|Cloud storage|Cloud storage|
-|Destination|Delta table|Redshift table|
-|SQL Engine|Delta Lake|Redshift|
+| Operation                   | Databricks Delta Lake | AWS Redshift                 |
+| --------------------------- | --------------------- | ---------------------------- |
+| Import data                 | `COPY INTO`           | `COPY`                       |
+| Export data                 | `UNLOAD`              | `UNLOAD`                     |
+| Tracks already-loaded files | ✅ Yes                 | ❌ No                         |
+| Upserts/deduplication       | ❌ Use `MERGE`         | ❌ Use `MERGE`/staging tables |
+| Source                      | Cloud storage         | Cloud storage                |
+| Destination                 | Delta table           | Redshift table               |
+| SQL Engine                  | Delta Lake            | Redshift                     |
 
 [[Delta Lake SQL Statements]]
 [[Pyspark]]
 [[Delta Table Operations]]
+[[Jobs]]

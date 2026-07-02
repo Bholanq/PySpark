@@ -8,17 +8,59 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d398aa9efc7996a4",
+            "id": "149d818f4094fff3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Triggers.md",
+                "file": "Databricks Connect.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Triggers"
+              "title": "Databricks Connect"
+            }
+          },
+          {
+            "id": "29c20011f3d4a6cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pivot & Unpivot Clause in SQL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pivot & Unpivot Clause in SQL"
+            }
+          },
+          {
+            "id": "c4354a984104829e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DESCRIBE STATEMENTS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DESCRIBE STATEMENTS"
+            }
+          },
+          {
+            "id": "5eea363aa58490cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Quicknotes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Quicknotes"
             }
           }
         ]
@@ -53,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Pivot",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +116,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,43 +226,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "d398aa9efc7996a4",
+  "active": "149d818f4094fff3",
   "lastOpenFiles": [
-    "Productionizing Data Pipelines.md",
-    "Triggers.md",
-    "Databrick Associate DE.md",
-    "Data Processing & Transformations.md",
-    "Delta Table Operations.md",
-    "Pasted image 20260618180717.png",
-    "Pasted image 20260618165259.png",
-    "Pasted image 20260618160505.png",
-    "Pyspark.md",
-    "DML.md",
-    "Delta Lake SQL Statements.md",
-    "Pasted image 20260618154840.png",
-    "Pasted image 20260618154713.png",
-    "CACHE STATEMENTS.md",
-    "Pasted image 20260618153823.png",
-    "Views.md",
-    "Pasted image 20260618124437.png",
-    "Pasted image 20260618115714.png",
-    "Pasted image 20260618090105.png",
-    "Pasted image 20260617164449.png",
-    "Deduplication and Validation Logic.md",
-    "Array Functions.md",
-    "Why Dataframes are better than RDDs.md",
-    "RDDs.md",
-    "Hadoop - HDFS&MapReduce.md",
-    "Apache Spark 4.0.md",
-    "Spark Architecture and Components.md",
-    "Development and Ingestion.md",
-    "RD.md",
+    "Pasted image 20260702075625.png",
     "Data Governance and Quality.md",
-    "Databricks Intelligence Platform.md",
+    "Databricks Connect.md",
+    "Databrick Associate DE.md",
+    "Access Control Scope.md",
+    "Pasted image 20260702072712.png",
+    "Pasted image 20260702072610.png",
+    "Apache Spark 4.0.md",
+    "Garbage Collection Cycle and Bucketing.md",
+    "Spark Structured Streaming.md",
+    "Spark SQL.md",
+    "Spark Architecture and Components.md",
+    "Inside DRIVER & Worker Nodes.md",
+    "Spark Session vs Spark Contexts.md",
+    "Pasted image 20260702072157.png",
+    "Metastore vs Unity Catalog.md",
+    "UC Volumes.md",
+    "Pasted image 20260702071940.png",
+    "UC Views.md",
+    "Pasted image 20260702071809.png",
+    "Pasted image 20260702071726.png",
+    "UC Tables.md",
+    "Delta Lake Tables.md",
+    "Pasted image 20260702071541.png",
+    "Pasted image 20260702070610.png",
+    "Data lineage.md",
+    "Pasted image 20260702070546.png",
+    "Pasted image 20260702070307.png",
     "Delta Lake Time Time Travel.md",
-    "Acid Properties.md",
-    "Row vs Columnar Storage.md",
-    "VACCUME.md",
-    "Optimizations.md"
+    "Data Processing & Transformations.md",
+    "Jobs.md",
+    "Monitoring Jobs and Failures.md",
+    "Productionizing Data Pipelines.md",
+    "DLT.md",
+    "Auto Loader.md",
+    "Triggers.md"
   ]
 }

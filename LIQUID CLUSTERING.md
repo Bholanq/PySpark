@@ -12,7 +12,8 @@ CLUSTER BY (customer_id);
 ```
 Or:
 ```
-ALTER TABLE ordersCLUSTER BY (customer_id);
+ALTER TABLE orders
+CLUSTER BY (customer_id);
 ```
 
 Databricks **does not immediately reorganize all the existing data**.
