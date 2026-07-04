@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Connect.md",
+                "file": "Development and Ingestion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Databricks Connect"
+              "title": "Development and Ingestion"
             }
           },
           {
@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Pivot",
+                "query": "Apac",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -228,14 +228,14 @@
   },
   "active": "149d818f4094fff3",
   "lastOpenFiles": [
+    "Apache Spark 4.0.md",
+    "Databricks Connect.md",
     "Pasted image 20260702075625.png",
     "Data Governance and Quality.md",
-    "Databricks Connect.md",
     "Databrick Associate DE.md",
     "Access Control Scope.md",
     "Pasted image 20260702072712.png",
     "Pasted image 20260702072610.png",
-    "Apache Spark 4.0.md",
     "Garbage Collection Cycle and Bucketing.md",
     "Spark Structured Streaming.md",
     "Spark SQL.md",
@@ -255,7 +255,6 @@
     "Pasted image 20260702070610.png",
     "Data lineage.md",
     "Pasted image 20260702070546.png",
-    "Pasted image 20260702070307.png",
     "Delta Lake Time Time Travel.md",
     "Data Processing & Transformations.md",
     "Jobs.md",
