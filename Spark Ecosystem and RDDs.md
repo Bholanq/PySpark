@@ -15,3 +15,4 @@ Q1. Why do we not directly write our code in rdds? If the code is converted from
 **RDD are not real data they're just logical partitions**
 ![[Pasted image 20260306181707.png|389]]
 
+![[Pasted image 20260705172454.png]]

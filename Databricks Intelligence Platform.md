@@ -22,7 +22,7 @@ An All-Purpose cluster is started by the user and after certain time of inactivi
 Jobs Clusters are ephemeral clusters created specifically for scheduled or production workloads.
 Job Clusters are created for that particular job.
 
-SQL Warehouses are SQL-optimized compute resources designed for analytics, dashboards, BI integrations, and natural-language querying through Genie.
+**SQL Warehouses** are SQL-optimized compute resources designed for analytics, dashboards, BI integrations, and natural-language querying through Genie.
 
 ![[Pasted image 20260607180605.png]]
 
