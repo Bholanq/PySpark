@@ -28,7 +28,7 @@ When talking about ETL and ELT, this usually refers to the data journey between 
 
 ## Solutions
 
-There were mainly two approaches to solve this: 1. Monolithic 2. Distributed 
+There were mainly two approaches to solve this: **1. Monolithic 2. Distributed** 
 
 1. Hadoop
 2. Spark
