@@ -4,7 +4,7 @@ The Cluster Manger uses [[YARN]]
 
 ![[Pasted image 20260707103259.png|463]]
 
-One of the worker nodes is selected as the **ApplicationMaster/Driver**.
+One of the worker nodes is selected as the **ApplicationMaster/Driver**. by the Master Node/Manager
 Within that worker node a container of the requested RAM is created(In this case 20GB RAM).
 
 ![[Pasted image 20260708081614.png|443]]

@@ -7,14 +7,14 @@ Dataframereader.format()\
 				.load()
 ```
 
-**.format(optional)** - Data file format 
+**.format(optional)** - Tells Spark **what data source/format you're reading** 
 .csv, .json, .ODBC/JDBC, .parquet
 
 - if we don't specify a format, it is  .parquet by default 
 
 **.option(optional)** - inferschema, mode, header
 
-**.schema(optional)** - you can specify your own schema for the data being ingested
+**.schema(optional)** - you can specify your own schema for the data being ingested/otherwise it assumes the schema
 
 **.load()** - specify the path from where the data is ingested
 

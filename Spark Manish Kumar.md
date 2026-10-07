@@ -40,7 +40,7 @@ Hadoop vs Spark
 Due to the way **Hadoop** was designed (HDFS + MapReduce).
 The Processing part of Hadoop, MapReduce specifically.
 
-Hadoop is slower than Spark, because it writes the data back to the disk and re-reads that disk again to in-memory.
+Hadoop is slower than Spark, because it writes the data back to the disk and re-reads that disk again to in-memory. For example when a single Map Reducer is enough to process the entire data.
 
 - This was done my google since their main requirement was to be able to continue the processing from where it had left off. This was because they also had many other processes running on their clusters which also needed the same compute. 
 

@@ -56,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -89,8 +91,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -201,23 +202,24 @@
   },
   "active": "19de782224158943",
   "lastOpenFiles": [
-    "Spark Ecosytem.md",
-    "Spark Manish Kumar.md",
     "Spark Architecture.md",
+    "YARN.md",
+    "JVM.md",
+    "Spark Manish Kumar.md",
+    "Spark Ecosytem.md",
+    "PySpark and SparkSQL.md",
+    "Reading Data in Spark.md",
+    "Schema.md",
+    "Method Chaining.md",
     "Apache Spark 4.0.md",
     "Spark Architecture and Components.md",
     "Memory Managment and Deployment modes.md",
-    "Schema.md",
-    "Reading Data in Spark.md",
-    "PySpark and SparkSQL.md",
     "Quicknotes.md",
     "ByteCode.md",
-    "JVM.md",
     "Pasted image 20260708113506.png",
     "Pasted image 20260708112230.png",
     "Pasted image 20260708081614.png",
     "Pasted image 20260708081508.png",
-    "YARN.md",
     "SDP - Spark Declarative Pipelines.md",
     "Pasted image 20260707103259.png",
     "Pasted image 20260707101425.png",
@@ -235,7 +237,6 @@
     "Hadoop - HDFS&MapReduce.md",
     "Development and Ingestion.md",
     "Databricks Connect.md",
-    "Data Governance and Quality.md",
-    "Databrick Associate DE.md"
+    "Data Governance and Quality.md"
   ]
 }
