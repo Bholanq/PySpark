@@ -1,10 +1,12 @@
-![[Pasted image 20260606044112.png]]
 
 1. [[Databricks Intelligence Platform]]
 2. [[Development and Ingestion]]
 3. [[Data Processing & Transformations]]
-4. [[Productionizing Data Pipelines]]
-5. [[Data Governance and Quality]] 
+4. [[Working with Lakeflow Jobs]]
+5. [[Implimenting CICD]]
+6. [[Troubleshooting, Monitoring, and Optimization]]
+7. [[Productionizing Data Pipelines]]
+8. [[Data Governance and Quality]] 
 
 ![[Pasted image 20260606045039.png|572]]
 

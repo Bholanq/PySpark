@@ -3,7 +3,7 @@
 
 ![[Pasted image 20260702065007.png]]
 ![[Pasted image 20260702071809.png]]
-[[Metastore vs Unity Catalog]]
+[[Hive Metastore vs Unity Catalog]]
 [[Access Control Scope]]
 
 

@@ -3,5 +3,4 @@
 [[Output modes in Streaming]]
 [[Triggered vs Cont Pipelines]]
 [[Auto Loader]]
-
 [[DLT]]

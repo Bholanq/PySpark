@@ -1,5 +1,7 @@
 Databricks is a Software Company that specializes in providing fully managed Apache Spark Clusters.
 
+[[Databricks and Lakehouse Fundamentals]]
+
 **Databricks Platform** - Databricks cloud based spark Platform.
 
 # DBU's and DSU's
@@ -76,6 +78,8 @@ similar to IAM in AWS
 # Workspace
 A **Databricks Workspace** is the **collaborative environment where users interact with Databricks**
 - Don't cost money
+
+[[Unity Catalog]]
 
 - UI where users interact with the Databricks Web Application
 - Contains:
